@@ -179,11 +179,11 @@ body{
                         }
                         ul.botones li p:hover{
                             background-color: #FFB427;
-                            color: #50147C;
+                            color: rgb(80, 20, 124);
                         }
     .chapter {
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(80, 20, 124, 0.8);
         box-sizing: border-box;
         display: flex;
         height: 100vh;   
@@ -193,7 +193,7 @@ body{
         width: 25%;
     }
         .active {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(80, 20, 124, 0.8);
         }              
             .box-info h3{
                 color: #fff;
