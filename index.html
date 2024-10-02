@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Para que Google no indexe este index-->
+    <meta name="googlebot" content="noindex" />
+    <meta name="googlebot-news" content="nosnippet" />
+    <meta name="robots" content="noindex, nofollow" />
+    <!---->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="./css/style.css?v2">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+       
+    <style>
+        #gpt_zocalo, 
+        #clever-45754-sticky-footer-shadow,
+        #browsi_wrapper_0_ai_1_rc_0,
+        #browsi_wrapper_1_ai_1_rc_0,
+        #browsi_wrapper_2_ai_1_rc_0,
+        #browsi_wrapper_3_ai_1_rc_0,
+        #browsi_wrapper_4_ai_1_rc_0,
+        #browsi_wrapper_5_ai_1_rc_0,
+         #browsi_wrapper_6_ai_1_rc_0,
+        #browsi_wrapper_7_ai_1_rc_0,
+        #browsi_wrapper_8_ai_1_rc_0,
+        #browsi_wrapper_9_ai_1_rc_0,
+        #browsi_wrapper_10_ai_1_rc_0,
+        .fs-sticky-footer,
+        .orp-player-wrapper,
+        #clever-45754-sticky-footer,
+        #elcomercio_zocalo{
+                display: none !important;
+                height: 0 !important;
+        }   
+        .header-d,
+        .nav-d__main-scroll,
+        .nav-d__main-scroll.scrolled{
+            position: relative;
+            z-index: 9999;
+        }
+    </style>
+
+</head>
+<body>    
+
+            
+    <div id="social">
+        <button id="fb" class="sharer button" data-sharer="facebook" data-hashtag="" data-url="#">Facebook</button>
+
+        <button id="wst" class="sharer button" data-sharer="whatsapp" data-title="El Comercio" data-url="#">Whatsapp</button>
+
+        <button id="tw" class="sharer button" data-sharer="twitter" data-title="El Comercio" data-hashtags="" data-via='elcomercio_peru' data-url="#">Twitter</button>
+    </div>   
+
+    <div id="map"></div>
+    
+    <div class="panel">
+        <div class="box-header">
+            <div class="box-ctn-titulo box-ctn-titular">
+                <h1>La <span>dorada vida</span> de los mineros ilegales en Pataz</h1>
+                <h2>La minería ilegal se ha convertido en la economía criminal más rentable y se ha apoderado de zonas como Pataz, en La Libertad, en donde crece una ciudad con evidentes signos de riqueza por la extracción de oro.</h2>
+            </div>            
+        </div>
+        <div class="box-bloque">
+            <div class="box-ctn-titulo">
+                <p>
+                    El Comercio registró la bonanza económica en Pataz, distrito de la provincia del mismo nombre de La Libertad. En esta zona operan clanes familiares dedicados a la minería ilegal, una economía criminal que mueve <span class="amarillo">US$6.000 millones</span> al año, más que el narcotráfico, que genera <span class="amarillo">US$4.800 millones,</span> y la trata de personas.
+                </p>
+            </div>
+        </div>
+        <div class="box-bloque">
+            <div class="box-ctn-titulo">
+                <p>
+                    En los centros poblados de Pataz hay construcciones de todo tipo: edificios que superan los <span class="amarillo">10 pisos,</span> amplias residencias con piscinas y canchas de fulbito, discotecas, hoteles y centros de recreación. Estos inmuebles están vinculados, según información policial, a mineros ilegales investigados que, en muchos casos, operan bajo la fachada de "informales".
+                </p>
+                <p>
+                    Mientras esta actividad se desarrolla con impunidad, <span class="subrayado">Pataz carece de carreteras y servicios básicos</span>, según pudo corroborar este Diario.
+                </p>
+            </div>
+        </div>
+        <div class="box-bloque">
+            <div class="box-ctn-titulo previo">
+                <p>
+                    Conoce los 13 puntos que retratan la realidad de Pataz
+                </p>
+            </div>
+        </div>
+        
+        <div id="Punto-1" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-1-2.webp" alt="" width="100%">
+                <h3>Pataz ciudad</h3>
+                <p>
+                    Clanes familiares dedicados a la minería ilegal se han apoderado de la localidad de Pataz. En la zona, se evidencia el crecimiento y la bonanza económica producto de la actividad ilícita.
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-2" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-2-2.webp" alt="" width="100%">
+                <h3>Palmeras de Shicún</h3>
+                <p>
+                    Centro de recreación que le pertenece al investigado minero ilegal Gregorio Palermo Segura Marcelo, conocido como 'Palermo'. Según información policial, en este inmueble, ubicado en el distrito de Pataz, Segura vivía.
+                    <span class="credito">Foto: PNP</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-3" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-3-2.webp" alt="" width="100%">
+                <h3>Palmeras de Vijus</h3>
+                <p>
+                    Este es otro de los centros de recreación de propiedad del minero ilegal Gregorio Segura. El inmueble se ubica en el centro poblado Vijus, en la localidad de Pataz.
+                    <span class="credito">Foto: PNP</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-4" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-4.webp" alt="" width="100%">
+                <h3>Residencias lujosas</h3>
+                <p>
+                    Inmueble con piscina y cancha de fulbito, propiedad de un minero ilegal. Es común encontrar residencias como estas en esta zona del país. 
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-5" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-13.webp" alt="" width="100%">
+                <h3>Inmuebles cerca de los socavones</h3>
+                <p>
+                    Los mineros ilegales construyen viviendas cerca o junto a los socavones de donde extraen el oro. 
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-6" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-5.webp" alt="" width="100%">
+                <h3>Oficina de mineros ilegales</h3>
+                <p>
+                    Los mineros ilegales se han ubicado en áreas de trabajo de minas formales, instalando su maquinaria y construyendo oficinas en las inmediaciones de la localidad de Pataz.
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-7" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-6.webp" alt="" width="100%">
+                <h3>Operaciones de mineros ilegales</h3>
+                <p>
+                    Los mineros ilegales separan el mineral extraído de los residuos para luego trasladarlo en sacos y procesarlo. Es una actividad que se puede observar con frecuencia en esta zona del país.
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-8" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-7.webp" alt="" width="100%">
+                <h3>Bocaminas</h3>
+                <p>
+                    Mineros ilegales se han encargado de habilitar bocaminas en diversos puntos ubicados en la ribera del río Hualanga para extraer los minerales.
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-9" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-8.webp" alt="" width="100%">
+                <h3>Residuos de la minería ilegal</h3>
+                <p>
+                    Cerca a las bocaminas, se han depositado varios desmontes de diferentes tamaños producto de las actividades mineras ilícitas.
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-10" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-9.webp" alt="" width="100%">
+                <h3>Antena repetidora</h3>
+                <p>
+                    El investigado minero ilegal Gregorio Segura instaló una antena repetidora cerca al centro de recreación Palmeras de Shicún, uno de los inmuebles en el que vivía. 
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-11" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-10.webp" alt="" width="100%">
+                <h3>Hoteles</h3>
+                <p>
+                    En Pataz se pueden observar edificaciones en varios puntos, como el hotel Orlando's, propiedad del minero informal Orlando Sánchez Iparraguirre.
+                    <span class="credito">Foto: Graciela Villasis</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-12" class="chapter">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-11.webp" alt="" width="100%">
+                <h3>Discotecas</h3>
+                <p>
+                    Además de hoteles y casas lujosas, en la localidad Pataz también se han construido varias discotecas, en donde ya se han registrado varias muertes.
+                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                </p>
+            </div>
+        </div>
+        <div id="Punto-13" class="chapter final">
+            <div class="box-info">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-12.webp" alt="" width="100%">
+                <h3>Grifos</h3>
+                <p>
+                    En la localidad de Zarumilla, ubicada en el distrito de Pataz, se han instalado grifos modernos que facilitan las labores de los mineros ilegales.
+                    <span class="credito">Foto: Graciela Villasis</span>
+                </p>
+            </div>
+        </div>
+        <div class="box-bloque">
+            <div class="box-ctn-titulo creditos">
+                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/somos-35-anos-mejores-portadas-ecpm/img/logo-comercio.png" alt="" width="100%">
+                <p>
+                    <span class="credito-final">Investigación:</span> Graciela Villasís 
+                </p>
+                <p>
+                    <span class="credito-final">Fotografía:</span> Aldo Rosales, Graciela Villasis, PNP
+                </p>
+                <p>
+                    <span class="credito-final">Realización:</span> Nuevas Narrativas EC
+                </p>
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/alan-garcia-una-vida-de-portada-ecpm/js/sharer.min.js"></script> 
+    <!--<script src="/especiales-multimedia/mapa-pataz/js/leaflet.js"></script>-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkDSdrjow3AEVxv461Mw49eAzX4xeB_kY"></script>    
+    <!--<script src="https://cdn.jsdelivr.net/npm/leaflet.gridlayer.googlemutant@0.14.1/dist/Leaflet.GoogleMutant.min.js"></script>-->
+    <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/js/Leaflet.GoogleMutant.min.js"></script>
+    
+    <script>
+        const map = L.map('map').setView([-7.7863751, -77.5962531], 16);  
+
+        var satMutant = L.gridLayer.googleMutant({
+            maxZoom: 24,
+            type: "satellite",
+        }).addTo(map);
+
+        /*var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 20
+        }).addTo(map); */
+       
+    
+        const chapters = {
+            'Punto-1': {
+                center: [-7.7862475, -77.5943434],
+                zoom: 18,
+                marker: L.marker([-7.7862475, -77.5943434]).bindPopup("Pataz ciudad")
+            },
+            'Punto-2': {
+                center: [-7.680921, -77.672809],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.680921, -77.672809]).bindPopup("Palmeras de Shicún")
+            },
+            'Punto-3': {
+                center: [-7.722541, -77.666115],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.722541, -77.666115]).bindPopup("Palmeras de Vijus")
+            },
+            'Punto-4': {
+                center: [-7.768306, -77.592731],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.768306, -77.592731]).bindPopup("Residencias lujosas")
+            },
+            'Punto-5': {
+                center: [-7.783789, -77.591299],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.783789, -77.591299]).bindPopup("Inmuebles cerca de los socavones")
+            },
+            'Punto-6': {
+                center: [-7.775179, -77.605460],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.775179, -77.605460]).bindPopup("Oficina de mineros ilegales")
+            },
+            'Punto-7': {
+                center: [-7.783733, -77.591386],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.783733, -77.591386]).bindPopup("Operaciones de mineros ilegales")
+            },
+            'Punto-8': {
+                center: [-7.772871, -77.602850],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.772871, -77.602850]).bindPopup("Bocaminas")
+            },
+            'Punto-9': {
+                center: [-7.765489, -77.595139],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.765489, -77.595139]).bindPopup("Residuos de la minería ilegal")
+            },
+            'Punto-10': {
+                center: [-7.684489, -77.673098],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.684489, -77.673098]).bindPopup("Antena repetidora")
+            },
+            'Punto-11': {
+                center: [-7.7826448, -77.5971485],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.7826448, -77.5971485]).bindPopup("Hoteles")
+            },
+            'Punto-12': {
+                center: [-7.788715, -77.606758],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.788715, -77.606758]).bindPopup("Discotecas")
+            },
+            'Punto-13': {
+                center: [-7.7593477,-77.5912886],
+                zoom: 18,
+                duration: 2,
+                marker: L.marker([-7.7593477,-77.5912886]).bindPopup("Grifos")
+            }
+        };
+    
+        let activeChapterName = 'baker';
+    
+        function setActiveChapter(chapterName) {
+            if (chapterName === activeChapterName) return;
+    
+            const chapter = chapters[chapterName];
+            map.flyTo(chapter.center, chapter.zoom, {
+                duration: chapter.duration || 1,
+            });
+    
+            chapter.marker.addTo(map).openPopup(); // Agrega el marcador al mapa y abre el popup
+    
+            document.getElementById(chapterName).classList.add('active');
+            document.getElementById(activeChapterName).classList.remove('active');
+    
+            activeChapterName = chapterName;
+        }
+    
+        function isElementOnScreen(id) {
+            const element = document.getElementById(id);
+            const bounds = element.getBoundingClientRect();
+            return bounds.top < window.innerHeight && bounds.bottom > 0;
+        }
+    
+        window.onscroll = () => {
+            for (const chapterName in chapters) {
+                if (isElementOnScreen(chapterName)) {
+                    setActiveChapter(chapterName);
+                    break;
+                }
+            }
+        };
+    </script>
+
+    <!-- script compartir -->
+    <script>
+        function shareUrl(event) {
+            const button = event.target;
+            const url = button.getAttribute('data-url');
+            
+            const sharer = button.getAttribute('data-sharer');
+            let shareUrl = '';
+
+            switch (sharer) {
+            case 'facebook':
+                const fbHashtag = button.getAttribute('data-hashtag') || '';
+                shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&hashtag=${encodeURIComponent(fbHashtag)}`;
+                break;
+                
+            case 'whatsapp':
+                const whatsappTitle = button.getAttribute('data-title');
+                shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(whatsappTitle + ' ' + url)}`;
+                break;
+                
+            case 'twitter':
+                const twitterTitle = button.getAttribute('data-title');
+                const twitterHashtags = button.getAttribute('data-hashtags');
+                const twitterVia = button.getAttribute('data-via');
+                shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterTitle)}&url=${encodeURIComponent(url)}&hashtags=${twitterHashtags}&via=${twitterVia}`;
+                break;
+            }
+
+            window.open(shareUrl, '_blank');
+        }
+
+        document.querySelectorAll('.sharer').forEach(button => {
+            button.addEventListener('click', shareUrl);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+html, 
+body{
+    box-sizing: border-box;    
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'helvetica_neueregular';
+    src: url('../fonts/helveticaneueroman-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneueroman-webfont.woff') format('woff');
+}
+
+    #social,
+    #social-2{   
+        margin: 0 auto;
+        position: absolute;
+        right: 20px;
+        z-index: 40;
+        top: 10px;    
+    }
+        #social ul,
+        #social-2 ul{
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0;
+            vertical-align: middle;
+        }
+            #social ul li,
+            #social-2 ul li{
+                display: inline-block;
+                margin: 0 3px;
+                vertical-align: middle;
+            }
+                #social ul li a,
+                #social-2 ul li a{
+                    cursor: pointer;    
+                    height: 36px;
+                    width: 36px;
+                }
+                    #fb{
+                        background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/fb-icon.png?v2) no-repeat 0 0;
+                        background-size: 100% !important;
+                        border: none;
+                        display: inline-block;
+                        height: 36px;
+                        text-indent: -9999px;
+                        width: 36px;
+                    }
+                    #wst{                
+                        background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/wsp-icon.png?v2) no-repeat 0 0 !important;
+                        background-size: 100% !important;
+                        border: none;
+                        display: none;
+                        height: 36px;
+                        text-indent: -9999px;
+                        width: 36px;
+                    }
+                    #tw{            
+                        background: url(https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/personas-desaparecidas/img/tw-icon.png?v2) no-repeat 0 0 !important;
+                        background-size: 100% !important;
+                        border: none;
+                        display: inline-block;
+                        height: 36px;
+                        text-indent: -9999px;
+                        width: 36px;
+                    }
+
+
+
+#map {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.panel{
+    position: absolute;
+    z-index: 10;
+}
+    .box-header,
+    .box-bloque{
+        background-color: rgba(80, 20, 124, 0.8);
+        color: #fff;
+        height: 100vh;
+        position: relative;
+        text-align: center;
+        width: 100vw;        
+    }
+        .box-header{
+            background: url('../img/bg-portada.jpg') no-repeat center left;
+            background-size: cover;
+        }
+        .box-ctn-titulo{
+            left: 50%;                         
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+            .box-header h1{
+                font: 3.1rem/1.2 "Merriweather", serif;
+                font-weight: 900;
+                margin: 0 auto 10px;
+                max-width: 425px;         
+            }
+            .box-header h2{
+                font: 1.1rem/1.5 "Merriweather", serif;
+                font-weight: 400;
+                margin: 0 auto;
+                max-width: 500px;
+            }
+            .box-ctn-titulo p{
+                font: 16px/1.8 "Merriweather", serif;
+                max-width: 500px;
+                text-align: left;
+            }
+                .box-ctn-titulo p span{
+                    font-weight: 800;
+                }
+                .box-header h1 span,
+                span.amarillo{
+                    color: #e7bc16;
+                }
+                span.subrayado{
+                    border-bottom: 1px solid #e7bc16;
+                    font-weight: inherit;
+                }
+    .chapter {
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        box-sizing: border-box;
+        display: flex;
+        height: 100vh;   
+        margin: 0;
+        justify-content: center; 
+        padding: 20px;
+        width: 25%;
+    }
+        .active {
+            background-color: rgba(0, 0, 0, 0.8);
+        }              
+            .box-info h3{
+                color: #fff;
+                font: 1.2rem/1.4 "Roboto", sans-serif;
+                font-weight: 700;
+                margin: 5px auto;
+            }
+            .box-info p{
+                color: #fff;
+                font: 1rem/1.5 "Roboto", sans-serif;
+                font-weight: 400;
+                margin: 10px auto;
+            }
+            span.credito{
+                display: block;
+                font-weight: 600;
+            }
+            .creditos p{
+                font-size: 1rem !important;
+                margin: 0 auto 10px;
+                text-align: center !important;
+            }
+            .creditos img{
+                display: block;
+                margin: 10px auto 20px;
+                max-width: 120px;
+            }
+            span.credito-final{
+                display: block;
+                font-weight: 700;
+            }
+            .previo{
+                bottom: 0;
+                left: 25%;
+                transform: none;                
+                top: inherit;                
+                width: 100%;
+            }
+                .previo p{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    max-width: 74%;                
+                }
+
+
+@media only screen and (max-width: 640px){
+
+    .box-header .box-ctn-titular{
+        width: 95%;
+    }
+    .box-ctn-titulo{
+        width: 80%;
+    }
+        .box-header h1{
+            font-size: 2.9rem;
+        }
+        .box-ctn-titulo p{
+            font-size: 17px;
+            max-width: inherit;
+            text-align: left;
+        }
+    .chapter{
+        align-items: flex-end;
+        background: transparent;
+        width: 100%;
+    }
+        .active{
+            background: transparent;
+        }
+        .final{
+            align-items: flex-start;
+        }  
+        .box-info{
+            padding: 10px;
+        }
+        .box-info{
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .previo{            
+            left: 4%;
+            position: absolute;           
+            transform: none;
+        }
+    #wst{
+        display: inline-block;
+    }
+
+}
