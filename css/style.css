@@ -15,6 +15,12 @@ body{
     src: url('../fonts/helveticaneueroman-webfont.woff2') format('woff2'),
          url('../fonts/helveticaneueroman-webfont.woff') format('woff');
 }
+@font-face {
+    font-family: 'Kind Avenue';
+    src: url('../fonts/KindAvenue-Regular.woff2') format('woff2'),
+        url('../fonts/KindAvenue-Regular.woff') format('woff');
+    font-display: swap;
+}
 
     #social,
     #social-2{   
@@ -98,32 +104,43 @@ body{
             background-size: cover;
         }
         .box-ctn-titulo{
-            left: 50%;                         
+            left: 60%;                         
             position: absolute;
-            top: 50%;
+            top: 45%;
             transform: translate(-50%, -50%);
         }
             .box-header h1{
-                font: 3.1rem/1.2 "Merriweather", serif;
-                font-weight: 900;
+                color: #FFB427;
+                font: 4rem/1 'Kind Avenue';
                 margin: 0 auto 10px;
-                max-width: 425px;         
+                max-width: 450px;         
             }
+                .box-header h1 span{
+                    color: #fff;
+                    display: block;
+                    font: 17px/1.2 'helvetica_neueregular';
+                    text-transform: uppercase;
+                }
+                .box-header h1 span.size{
+                    color: #FFB427;
+                    display: inline-block;
+                    font-family: 'Kind Avenue';
+                    font-size: 2rem;
+                    text-transform: none;
+                }
             .box-header h2{
-                font: 1.1rem/1.5 "Merriweather", serif;
-                font-weight: 400;
+                font: 17px/1.5 'helvetica_neueregular';
                 margin: 0 auto;
-                max-width: 500px;
+                max-width: 400px;
             }
             .box-ctn-titulo p{
-                font: 16px/1.8 "Merriweather", serif;
+                font: 16px/1.8 'helvetica_neueregular';
                 max-width: 500px;
-                text-align: left;
+                text-align: center;
             }
                 .box-ctn-titulo p span{
                     font-weight: 800;
                 }
-                .box-header h1 span,
                 span.amarillo{
                     color: #e7bc16;
                 }
@@ -131,6 +148,39 @@ body{
                     border-bottom: 1px solid #e7bc16;
                     font-weight: inherit;
                 }
+            ul.botones{
+                max-width: 450px;
+                padding: 0;
+                text-align: center;
+            }
+                ul.botones li{  
+                    cursor: pointer;
+                    margin: 10px;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                    ul.botones li p{
+                        background-color: #50147C;
+                        border: 1px solid #FFB427;
+                        border-radius: 10px;
+                        color: #FFB427;
+                        font: 14px/1.3 'Kind Avenue';
+                        margin: 0 auto;
+                        padding: 10px 20px;
+                    }
+                        ul.botones li p.fecha{
+                            background: transparent;
+                            border: none;
+                            color: #fff;
+                            display: block;
+                            font-weight: normal;
+                            margin: 5px 0;
+                            padding: 0;
+                        }
+                        ul.botones li p:hover{
+                            background-color: #FFB427;
+                            color: #50147C;
+                        }
     .chapter {
         align-items: center;
         background-color: rgba(0, 0, 0, 0.8);
