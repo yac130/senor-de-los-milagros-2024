@@ -264,6 +264,30 @@
     <!--<script src="https://cdn.jsdelivr.net/npm/leaflet.gridlayer.googlemutant@0.14.1/dist/Leaflet.GoogleMutant.min.js"></script>-->
     <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/js/Leaflet.GoogleMutant.min.js"></script>
     
+    <!-- scroll anclas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iterar sobre cada li de la lista con ID "recorrido-X"
+            document.querySelectorAll('.botones li').forEach(function(li, index) {
+                // Agregar un listener de clic a cada li
+                li.addEventListener('click', function() {
+                    // Obtener el ID del punto al que se quiere hacer scroll
+                    const puntoId = `Punto-${index + 1}`;
+                    const puntoElement = document.getElementById(puntoId);
+                    
+                    // Hacer scroll suave al elemento correspondiente
+                    if (puntoElement) {
+                        puntoElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    
+    
     <script>
         const map = L.map('map').setView([-12.045710, -77.037188], 16);  
 
@@ -429,27 +453,6 @@
         });
     </script>
 
-    <!-- scroll anclas -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Iterar sobre cada li de la lista con ID "recorrido-X"
-            document.querySelectorAll('.botones li').forEach(function(li, index) {
-                // Agregar un listener de clic a cada li
-                li.addEventListener('click', function() {
-                    // Obtener el ID del punto al que se quiere hacer scroll
-                    const puntoId = `punto-${index + 1}`;
-                    const puntoElement = document.getElementById(puntoId);
-                    
-                    // Hacer scroll suave al elemento correspondiente
-                    if (puntoElement) {
-                        puntoElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
+    
 </body>
 </html>
