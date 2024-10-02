@@ -104,69 +104,79 @@
         
         <div id="Punto-1" class="chapter">
             <div class="box-info">
-                <img src="./img/bg-punto-1.gif" alt="" width="100%">
+                <h3>
+                    <span>Recorrido 1</span>    
+                    Iglesia de las Nazarenas                
+                </h3>
+                <img src="./img/bg-punto-1.gif" alt="" width="100%">                
+                <p>
+                    <span>Partida</span>
+                    Salida de la Iglesia de las Nazarenas ubicada en el cruce de Huancavelica 515 con Avenida Tacna.
+                </p>
+            </div>
+        </div>
+        <div id="Recorrido-1-Punto-2" class="chapter">            
+            <div class="box-info">
                 <h3>
                     <span>Recorrido 1</span>
-                    Iglesia de las Nazarenas
+                    Av. Emancipación
                 </h3>
+                <img src="./img/bg-punto-2.gif" alt="" width="100%">               
                 <p>
-                    Salida de la Iglesia de las Nazarenas ubicada en el cruce de Huancavelica 515 con Avenida Tacna.
+                    <span>Punto 2</span>
+                    La procesión continuará por Av. Emancipación.
+                </p>
+            </div>
+        </div>
+        <div id="Recorrido-1-Punto-3" class="chapter">
+            <div class="box-info">
+                <h3>
+                    <span>Recorrido 1</span>
+                    Jirón Chancay
+                </h3>
+                <img src="./img/bg-punto-3.gif" alt="" width="100%">
+                <p>
+                    <span>Punto 3</span>
+                    Continúa por los jirones Chancay y Conde de Superunda.
+                </p>
+            </div>
+        </div>
+        <div id="Recorrido-1-Punto-4" class="chapter">
+            <div class="box-info">
+                <h3>
+                    <span>Recorrido 1</span>
+                    Retorno a la Iglesia de las Nazarenas
+                </h3>
+                <img src="./img/bg-punto-4.gif" alt="" width="100%">                
+                <p>
+                    <span>Punto final</span>
+                    Para luego retornar al Monasterio donde permanecerá guardado hasta la segunda salida.
                 </p>
             </div>
         </div>
         <div id="Punto-2" class="chapter">
             <div class="box-info">
-                <img src="./img/bg-punto-2.gif" alt="" width="100%">
                 <h3>
-                    <span>Recorrido 1</span>
-                    Av. Emancipación
+                    <span>Recorrido 2</span>
+                    Iglesia de las Nazarenas
                 </h3>
+                <img src="./img/bg-punto-recorrido-2-1.gif" alt="" width="100%">                
                 <p>
-                    La procesión continuará por Av. Emancipación.
+                    <span>Partida</span>
+                    Inicia en Av. Tacna, y prosigue por Ica.
                 </p>
             </div>
         </div>
-        <div id="Punto-3" class="chapter">
+        <div id="Recorrido-2-Punto-2" class="chapter">
             <div class="box-info">
-                <img src="./img/bg-punto-3.gif" alt="" width="100%">
                 <h3>
-                    <span>Recorrido 1</span>
-                    Jirón Chancay
+                    <span>Recorrido 2</span>
+                    Jirón Ica
                 </h3>
+                <img src="./img/bg-punto-recorrido-2-2.gif?v2" alt="" width="100%">                
                 <p>
-                    Continúa por los jirones Chancay y Conde de Superunda.
-                </p>
-            </div>
-        </div>
-        <div id="Punto-4" class="chapter">
-            <div class="box-info">
-                <img src="./img/bg-punto-4.gif" alt="" width="100%">
-                <h3>
-                    <span>Recorrido 1</span>
-                    Retorno a la Iglesia de las Nazarenas
-                </h3>
-                <p>
-                    Para luego retornar al Monasterio donde permanecerá guardado hasta la segunda salida.
-                </p>
-            </div>
-        </div>
-        <div id="Punto-5" class="chapter">
-            <div class="box-info">
-                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-13.webp" alt="" width="100%">
-                <h3>Inmuebles cerca de los socavones</h3>
-                <p>
-                    Los mineros ilegales construyen viviendas cerca o junto a los socavones de donde extraen el oro. 
-                    <span class="credito">Foto: Aldo Rosales Chavez</span>
-                </p>
-            </div>
-        </div>
-        <div id="Punto-6" class="chapter">
-            <div class="box-info">
-                <img src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/img/foto-5.webp" alt="" width="100%">
-                <h3>Oficina de mineros ilegales</h3>
-                <p>
-                    Los mineros ilegales se han ubicado en áreas de trabajo de minas formales, instalando su maquinaria y construyendo oficinas en las inmediaciones de la localidad de Pataz.
-                    <span class="credito">Foto: Aldo Rosales Chavez</span>
+                    <span>Punto 1</span>
+                    Prosigue por Ica y Jirón de la Unión
                 </p>
             </div>
         </div>
@@ -309,35 +319,35 @@
                 zoom: 18,
                 marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
             },
-            'Punto-2': {
+            'Recorrido-1-Punto-2': {
                 center: [-12.045883, -77.038187],
                 zoom: 18,
                 duration: 2,
                 marker: L.marker([-12.045883, -77.038187]).bindPopup("Av. Emancipación")
             },
-            'Punto-3': {
+            'Recorrido-1-Punto-3': {
                 center: [-12.042759, -77.036204],
                 zoom: 18,
                 duration: 2,
                 marker: L.marker([-12.042759, -77.036204]).bindPopup("Jirón Chancay")
             },
-            'Punto-4': {
+            'Recorrido-1-Punto-4': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
                 marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
             },
-            'Punto-5': {
-                center: [-7.783789, -77.591299],
+            'Punto-2': {
+                center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-7.783789, -77.591299]).bindPopup("Inmuebles cerca de los socavones")
+                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
             },
-            'Punto-6': {
-                center: [-7.775179, -77.605460],
+            'Recorrido-2-Punto-2': {
+                center: [-12.046781, -77.032533],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-7.775179, -77.605460]).bindPopup("Oficina de mineros ilegales")
+                marker: L.marker([-12.046781, -77.032533]).bindPopup("Jirón Ica")
             },
             'Punto-7': {
                 center: [-7.783733, -77.591386],

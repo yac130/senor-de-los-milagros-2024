@@ -212,9 +212,10 @@ body{
                 font-weight: 400;
                 margin: 10px auto;
             }
+            .box-info p span,
             span.credito{
                 display: block;
-                font-weight: 600;
+                font-weight: 700;
             }
             .creditos p{
                 font-size: 1rem !important;
