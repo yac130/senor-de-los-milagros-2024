@@ -197,10 +197,15 @@ body{
         }              
             .box-info h3{
                 color: #fff;
-                font: 1.2rem/1.4 "Roboto", sans-serif;
+                font: 1.2rem/1.4 'Kind Avenue';
                 font-weight: 700;
+                letter-spacing: 1.1px;
                 margin: 5px auto;
             }
+                .box-info h3 span{
+                    color: #FFB427;
+                    display: block;
+                }
             .box-info p{
                 color: #fff;
                 font: 1rem/1.5 "Roboto", sans-serif;
