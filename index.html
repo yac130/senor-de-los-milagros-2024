@@ -68,31 +68,31 @@
                 <h2>Recorridos y planes de desvío durante las salidas el Cristo de Pachacamilla en Lima</h2>
                 <p>Selecciona un recorrido</p>
                 <ul class="botones">
-                    <li>
+                    <li id="recorrido-1">
                         <p>
                             Recorrido 1
                         </p>
                         <p class="fecha">5 de octubre</p>
                     </li>
-                    <li>
+                    <li id="recorrido-2">
                         <p>
                             Recorrido 2
                         </p>
                         <p class="fecha">18 de octubre</p>
                     </li>
-                    <li>
+                    <li id="recorrido-3">
                         <p>
                             Recorrido 3
                         </p>
                         <p class="fecha">19 de octubre</p>
                     </li>
-                    <li>
+                    <li id="recorrido-4">
                         <p>
                             Recorrido 4
                         </p>
                         <p class="fecha">28 de octubre</p>
                     </li>
-                    <li>
+                    <li id="recorrido-5">
                         <p>
                             Recorrido 5
                         </p>
@@ -426,6 +426,28 @@
 
         document.querySelectorAll('.sharer').forEach(button => {
             button.addEventListener('click', shareUrl);
+        });
+    </script>
+
+    <!-- scroll anclas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iterar sobre cada li de la lista con ID "recorrido-X"
+            document.querySelectorAll('.botones li').forEach(function(li, index) {
+                // Agregar un listener de clic a cada li
+                li.addEventListener('click', function() {
+                    // Obtener el ID del punto al que se quiere hacer scroll
+                    const puntoId = `punto-${index + 1}`;
+                    const puntoElement = document.getElementById(puntoId);
+                    
+                    // Hacer scroll suave al elemento correspondiente
+                    if (puntoElement) {
+                        puntoElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
         });
     </script>
 
