@@ -250,7 +250,12 @@ body{
 
 @media only screen and (max-width: 640px){
 
+    .box-header{
+        background: url('../img/bg-portada-movil.jpg') no-repeat center;
+        background-size: cover;
+    }
     .box-header .box-ctn-titular{
+        left: 50%;
         width: 95%;
     }
     .box-ctn-titulo{
@@ -262,7 +267,6 @@ body{
         .box-ctn-titulo p{
             font-size: 17px;
             max-width: inherit;
-            text-align: left;
         }
     .chapter{
         align-items: flex-end;
@@ -288,6 +292,9 @@ body{
         }
     #wst{
         display: inline-block;
+    }
+    ul.botones li p{
+        font-size: 17px;
     }
 
 }
