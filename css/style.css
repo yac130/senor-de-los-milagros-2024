@@ -243,7 +243,10 @@ body{
                     font-weight: 600;
                     max-width: 74%;                
                 }
-
+        .creditos{
+            left: 50%;
+        }        
+            
 
 @media only screen and (max-width: 640px){
 
