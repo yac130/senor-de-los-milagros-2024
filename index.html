@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
        
     <style>
+        .skin-content .skin-template-model0,
         #gpt_zocalo, 
         #clever-45754-sticky-footer-shadow,
         #browsi_wrapper_0_ai_1_rc_0,
@@ -68,19 +69,19 @@
                 <h2>Recorridos y planes de desvío durante las salidas el Cristo de Pachacamilla en Lima</h2>
                 <p>Selecciona un recorrido</p>
                 <ul class="botones">
-                    <li id="recorrido-1">
+                    <li id="recorrido-1" class="inactivo">
                         <p>
                             Recorrido 1
                         </p>
                         <p class="fecha">5 de octubre</p>
                     </li>
-                    <li id="recorrido-2" class="inactivo">
+                    <li id="recorrido-2">
                         <p>
                             Recorrido 2
                         </p>
                         <p class="fecha">18 de octubre</p>
                     </li>
-                    <li id="recorrido-3" class="inactivo">
+                    <li id="recorrido-3">
                         <p>
                             Recorrido 3
                         </p>
@@ -102,7 +103,7 @@
             </div>            
         </div>
         
-        <div id="Punto-1" class="chapter">
+        <!--<div id="Punto-1" class="chapter">
             <div class="box-info">
                 <h3>
                     <span>Recorrido 1 <br>5 de octubre | 12:00 p.m.</span>    
@@ -169,8 +170,8 @@
                     <img class="flecha" src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/resumen-fotos-2023/img/flecha-bajar-blanca.png" alt="" width="100%">
                 </div>
             </div>
-        </div>
-        <!--<div id="Punto-2" class="chapter">
+        </div>-->
+        <div id="Punto-2" class="chapter">
             <div class="box-info">
                 <h3>
                     <span>Recorrido 2 <br>18 de octubre | 6:00 a.m.</span>    
@@ -339,7 +340,7 @@
                 </p>
             </div>
         </div>
-        <div id="Punto-4" class="chapter">
+        <!--<div id="Punto-4" class="chapter">
             <div class="box-info">
                 <h3>
                     <span>Recorrido 4 <br>28 de octubre | 6:00 a.m.</span>    
@@ -456,9 +457,7 @@
                 });
             });
         });
-    </script>
-
-    
+    </script>   
     
     <script>
         const map = L.map('map').setView([-12.045710, -77.037188], 16);  
@@ -472,147 +471,196 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
             maxZoom: 20
-        }).addTo(map); */
-       
-    
+        }).addTo(map); */      
+        
+        // Define los íconos de Leaflet con diferentes colores
+        const markerIcons = {
+            /*'Punto-1': L.icon({ iconUrl: './img/marcador-azul.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-1-Punto-2': L.icon({ iconUrl: './img/marcador-azul.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-1-Punto-3': L.icon({ iconUrl: './img/marcador-azul.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-1-Punto-4': L.icon({ iconUrl: './img/marcador-azul.png', iconSize: [25, 41], iconAnchor: [12, 10] }),*/
+            'Punto-2': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-2-Punto-2': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-2-Punto-3': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-2-Punto-4': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-2-Punto-5': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-2-Punto-6': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-2-Punto-7': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-2-Punto-8': L.icon({ iconUrl: './img/marcador-verde.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Punto-3': L.icon({ iconUrl: './img/marcador-rosado.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-3-Punto-1': L.icon({ iconUrl: './img/marcador-rosado.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-3-Punto-2': L.icon({ iconUrl: './img/marcador-rosado.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-3-Punto-3': L.icon({ iconUrl: './img/marcador-rosado.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-3-Punto-4': L.icon({ iconUrl: './img/marcador-rosado.png', iconSize: [25, 41], iconAnchor: [12, 10] })
+            /*'Punto-4': L.icon({ iconUrl: './img/marcador-naranja.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-4-Punto-1': L.icon({ iconUrl: './img/marcador-naranja.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Punto-5': L.icon({ iconUrl: './img/marcador-rojo.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-5-Punto-1': L.icon({ iconUrl: './img/marcador-rojo.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-5-Punto-2': L.icon({ iconUrl: './img/marcador-rojo.png', iconSize: [25, 41], iconAnchor: [12, 10] }),
+            'Recorrido-5-Punto-3': L.icon({ iconUrl: './img/marcador-rojo.png', iconSize: [25, 41], iconAnchor: [12, 10] })*/
+        };
+
         const chapters = {
-            'Punto-1': {
+            /*'Punto-1': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
-                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
+                marker: L.marker([-12.045710, -77.037188], 
+                { icon: markerIcons['Punto-1'] }).bindPopup("Iglesia de las Nazarenas")
             },
             'Recorrido-1-Punto-2': {
                 center: [-12.045883, -77.038187],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.045883, -77.038187]).bindPopup("Av. Emancipación")
+                marker: L.marker([-12.045883, -77.038187],
+                { icon: markerIcons['Recorrido-1-Punto-2'] }).bindPopup("Av. Emancipación")
             },
             'Recorrido-1-Punto-3': {
                 center: [-12.042759, -77.036204],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.042759, -77.036204]).bindPopup("Jirón Chancay")
+                marker: L.marker([-12.042759, -77.036204],
+                { icon: markerIcons['Recorrido-1-Punto-3'] }).bindPopup("Jirón Chancay")
             },
             'Recorrido-1-Punto-4': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
-            },
+                marker: L.marker([-12.045710, -77.037188],
+                { icon: markerIcons['Recorrido-1-Punto-4'] }).bindPopup("Iglesia de las Nazarenas")
+            },*/
             'Punto-2': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
+                marker: L.marker([-12.045710, -77.037188],
+                { icon: markerIcons['Punto-2'] }).bindPopup("Iglesia de las Nazarenas")
             },
             'Recorrido-2-Punto-2': {
                 center: [-12.046781, -77.032533],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.046781, -77.032533]).bindPopup("Jirón Ica")
+                marker: L.marker([-12.046781, -77.032533],
+                { icon: markerIcons['Recorrido-2-Punto-2'] }).bindPopup("Jirón Ica")
             },
             'Recorrido-2-Punto-3': {
                 center: [-12.046267, -77.030483],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.046267, -77.030483]).bindPopup("Plaza de Armas")
+                marker: L.marker([-12.046267, -77.030483],
+                { icon: markerIcons['Recorrido-2-Punto-3'] }).bindPopup("Plaza de Armas")
             },
             'Recorrido-2-Punto-4': {
                 center: [-12.048450, -77.029867],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.048450, -77.029867]).bindPopup("Jirón Ucayali")
+                marker: L.marker([-12.048450, -77.029867],
+                { icon: markerIcons['Recorrido-2-Punto-4'] }).bindPopup("Jirón Ucayali")
             },
             'Recorrido-2-Punto-5': {
                 center: [-12.048391, -77.026953],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.048391, -77.026953]).bindPopup("Av. Abancay")
+                marker: L.marker([-12.048391, -77.026953],
+                { icon: markerIcons['Recorrido-2-Punto-5'] }).bindPopup("Av. Abancay")
             },
             'Recorrido-2-Punto-6': {
                 center: [-12.047772, -77.021294],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.047772, -77.021294]).bindPopup("Jirón Ancash")
+                marker: L.marker([-12.047772, -77.021294],
+                { icon: markerIcons['Recorrido-2-Punto-6'] }).bindPopup("Jirón Ancash")
             },
             'Recorrido-2-Punto-7': {
                 center: [-12.050736, -77.015704],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.050736, -77.015704]).bindPopup("Jirón Manuel Pardo")
+                marker: L.marker([-12.050736, -77.015704],
+                { icon: markerIcons['Recorrido-2-Punto-7'] }).bindPopup("Jirón Manuel Pardo")
             },
             'Recorrido-2-Punto-8': {
                 center: [-12.051129, -77.019298],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.051129, -77.019298]).bindPopup("Iglesia del Carmen")
+                marker: L.marker([-12.051129, -77.019298],
+                { icon: markerIcons['Recorrido-2-Punto-8'] }).bindPopup("Iglesia del Carmen")
             },
             'Punto-3': {
                 center: [-12.056430, -77.016894],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.056430, -77.016894]).bindPopup("Hospital Dos de Mayo")
+                marker: L.marker([-12.056430, -77.016894],
+                { icon: markerIcons['Punto-3'] }).bindPopup("Hospital Dos de Mayo")
             },
             'Recorrido-3-Punto-1': {
                 center: [-12.058334, -77.022581],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.058334, -77.022581]).bindPopup("Hospital Almenara")
+                marker: L.marker([-12.058334, -77.022581],
+                { icon: markerIcons['Recorrido-3-Punto-1'] }).bindPopup("Hospital Almenara")
             },
             'Recorrido-3-Punto-2': {
                 center: [-12.055249, -77.026871],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.055249, -77.026871]).bindPopup("Iglesia Santa Catalina")
+                marker: L.marker([-12.055249, -77.026871],
+                { icon: markerIcons['Recorrido-3-Punto-2'] }).bindPopup("Iglesia Santa Catalina")
             },
             'Recorrido-3-Punto-3': {
                 center: [-12.057665, -77.035547],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.057665, -77.035547]).bindPopup("Palacio de Justicia")
+                marker: L.marker([-12.057665, -77.035547],
+                { icon: markerIcons['Recorrido-3-Punto-3'] }).bindPopup("Palacio de Justicia")
             },
             'Recorrido-3-Punto-4': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
-            },
-            'Punto-4': {
+                marker: L.marker([-12.045710, -77.037188],
+                { icon: markerIcons['Recorrido-3-Punto-4'] }).bindPopup("Iglesia de las Nazarenas")
+            }
+            /*'Punto-4': {
                 center: [-12.050199, -77.042571],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.050199, -77.042571]).bindPopup("Hospital Loayza")
+                marker: L.marker([-12.050199, -77.042571],
+                { icon: markerIcons['Punto-4'] }).bindPopup("Hospital Loayza")
             },
             'Recorrido-4-Punto-1': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
+                marker: L.marker([-12.045710, -77.037188],
+                { icon: markerIcons['Recorrido-4-Punto-1'] }).bindPopup("Iglesia de las Nazarenas")
             },
             'Punto-5': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
+                marker: L.marker([-12.045710, -77.037188],
+                { icon: markerIcons['Punto-5'] }).bindPopup("Iglesia de las Nazarenas")
             },
             'Recorrido-5-Punto-1': {
                 center: [-12.043221, -77.035979],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.043221, -77.035979]).bindPopup("Jirón Callao")
+                marker: L.marker([-12.043221, -77.035979],
+                { icon: markerIcons['Recorrido-5-Punto-1'] }).bindPopup("Jirón Callao")
             },
             'Recorrido-5-Punto-2': {
                 center: [-12.044701, -77.037609],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.044701, -77.037609]).bindPopup("Jirón Chancay")
+                marker: L.marker([-12.044701, -77.037609],
+                { icon: markerIcons['Recorrido-5-Punto-2'] }).bindPopup("Jirón Chancay")
             },
             'Recorrido-5-Punto-3': {
                 center: [-12.045710, -77.037188],
                 zoom: 18,
                 duration: 2,
-                marker: L.marker([-12.045710, -77.037188]).bindPopup("Iglesia de las Nazarenas")
-            }
+                marker: L.marker([-12.045710, -77.037188],
+                { icon: markerIcons['Recorrido-5-Punto-3'] }).bindPopup("Iglesia de las Nazarenas")
+            }*/
         };
     
         let activeChapterName = 'baker';
