@@ -432,9 +432,9 @@
         
     <!--<script src="/especiales-multimedia/mapa-pataz/js/leaflet.js"></script>-->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkDSdrjow3AEVxv461Mw49eAzX4xeB_kY"></script>    
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkDSdrjow3AEVxv461Mw49eAzX4xeB_kY"></script>   --> 
     <!--<script src="https://cdn.jsdelivr.net/npm/leaflet.gridlayer.googlemutant@0.14.1/dist/Leaflet.GoogleMutant.min.js"></script>-->
-    <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/js/Leaflet.GoogleMutant.min.js"></script>
+    <!--<script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/mapa-pataz/js/Leaflet.GoogleMutant.min.js"></script>-->
     
     <!-- scroll anclas -->
     <script>
@@ -461,16 +461,16 @@
     <script>
         const map = L.map('map').setView([-12.045710, -77.037188], 16);  
 
-        var satMutant = L.gridLayer.googleMutant({
+        /*var satMutant = L.gridLayer.googleMutant({
             maxZoom: 24,
             type: "satellite",
-        }).addTo(map);
+        }).addTo(map);*/
 
-        /*var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             subdomains: 'abcd',
             maxZoom: 20
-        }).addTo(map); */      
+        }).addTo(map);     
         
         // Define los íconos de Leaflet con diferentes colores
         const markerIcons = {
